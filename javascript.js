@@ -1,4 +1,5 @@
-
+let humanScore = 0
+let computerScore = 0
 
 function getHumanChoice() {
 
@@ -13,3 +14,12 @@ function getComputerChoice() {
     return option[Math.floor(Math.random()*option.length)];
 }
 console.log(getComputerChoice());
+
+let result1 = getHumanChoice();
+let result2 = getComputerChoice();
+
+if ( result1 === result2) {
+    console.log("y")
+} else {
+    console.log("n")
+}
