@@ -1,5 +1,3 @@
-let humanScore = 0
-let computerScore = 0
 
 function getHumanChoice() {
 
@@ -7,19 +5,26 @@ function getHumanChoice() {
     return getHumanChoice;
     
 }
-console.log(getHumanChoice());
+
 
 function getComputerChoice() {
+
     let option = ["Rock", "Paper", "Scissors"];
     return option[Math.floor(Math.random()*option.length)];
+    
 }
+console.log(getHumanChoice());
 console.log(getComputerChoice());
 
-let result1 = getHumanChoice();
-let result2 = getComputerChoice();
+let humanScore = 0;
+let computerScore = 0;
 
-if ( result1 === result2) {
-    console.log("y")
+if (/etHumanChoice() === getComputerChoice()) {
+    humanScore++
+
+    
 } else {
-    console.log("n")
+    computerScore++
 }
+console.log("ComputerScore:", + computerScore)
+console.log("HuumanScore:", + humanScore);
