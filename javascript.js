@@ -19,7 +19,7 @@ console.log(getComputerChoice());
 let humanScore = 0;
 let computerScore = 0;
 
-if (/etHumanChoice() === getComputerChoice()) {
+if (getHumanChoice() === getComputerChoice()) {
     humanScore++
 
     
@@ -28,3 +28,14 @@ if (/etHumanChoice() === getComputerChoice()) {
 }
 console.log("ComputerScore:", + computerScore)
 console.log("HuumanScore:", + humanScore);
+
+function playRound(humanchoice, ComputerChoice) {
+    if (humanchoice === ComputerChoice) {
+        console.log("match!");
+        humanScore++;
+    } else {
+        console.log("no match");
+        computerScore++;
+    }
+    console.log('Score - You: ${humanScore}, Computer: ${computerScore}');
+}
