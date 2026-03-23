@@ -51,3 +51,4 @@ function playRound(humanchoice, ComputerChoice) {
     }
     console.log('Score - You: ${humanScore}, Computer: ${computerScore}');
 }
+
