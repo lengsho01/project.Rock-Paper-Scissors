@@ -1,41 +1,55 @@
 
-function getHumanChoice() {
+// let humanScore = 0;
+// let computerScore = 0;
 
-    let getHumanChoice = prompt("Enter your choice please(Rock, Paper, Scissors):");
-    return getHumanChoice;
-    
-}
+// function getHumanChoice() {
+//   return prompt("Enter your choice (Rock, Paper, Scissors):").toLowerCase();
+// }
 
+// function getComputerChoice() {
+//   let options = ["rock", "paper", "scissors"];
+//   return options[Math.floor(Math.random() * options.length)];
+// }
+// console.log(`computer choice:  ${getComputerChoice()} My choice: ${getHumanChoice()}`);
+// function playRound(humanChoice, computerChoice) {
+//   if (humanChoice === computerChoice) {
+//     console.log("Match!");
+//     humanScore++;
+//   } else {
+//     console.log("No match");
+//     computerScore++;
+//   }
+//   console.log(`Score - You: ${humanScore}, Computer: ${computerScore}`);
+// }
 
-function getComputerChoice() {
-
-    let option = ["Rock", "Paper", "Scissors"];
-    return option[Math.floor(Math.random()*option.length)];
-    
-}
-console.log(getHumanChoice());
-console.log(getComputerChoice());
+// let humanChoice = getHumanChoice();
+// let computerChoice = getComputerChoice();
+// playRound(humanChoice, computerChoice);
 
 let humanScore = 0;
 let computerScore = 0;
 
-if (getHumanChoice() === getComputerChoice()) {
-    humanScore++
-
-    
-} else {
-    computerScore++
+function getHumanChoice() {
+  return prompt("Enter your choice (Rock, Paper, Scissors):").toLowerCase();
 }
-console.log("ComputerScore:", + computerScore)
-console.log("HuumanScore:", + humanScore);
 
-function playRound(humanchoice, ComputerChoice) {
-    if (humanchoice === ComputerChoice) {
-        console.log("match!");
-        humanScore++;
-    } else {
-        console.log("no match");
-        computerScore++;
-    }
-    console.log('Score - You: ${humanScore}, Computer: ${computerScore}');
+function getComputerChoice() {
+  let options = ["rock", "paper", "scissors"];
+  return options[Math.floor(Math.random() * options.length)];
+}
+
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
+
+console.log(`Computer choice: ${computerChoice}, Your choice: ${humanChoice}`);
+
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === computerChoice) {
+    console.log("Match!");
+    humanScore++;
+  } else {
+    console.log("No match");
+    computerScore++;
+  }
+  console.log(`Score - You: ${humanScore}, Computer: ${computerScore}`);
 }
